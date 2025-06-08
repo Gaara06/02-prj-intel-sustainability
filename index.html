@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 <body>
 
   <!-- Header / Hero Section -->
   <header>
     <div>
-      <!-- Ask Copilot to teach you about `.svg` 🙂 -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <img src="img/intel-header-logo.svg" alt="Intel corporate logo" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
@@ -27,61 +27,98 @@
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section>
+  <!-- Bootstrap 3-column layout with RTL support -->
+  <div class="container my-4" dir="rtl" role="main">
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Column 1 content -->
+        <h2>First Column</h2>
+        <p>This is sample text in the first column. You can put any content you want here.</p>
+      </div>
+      <div class="col-md-4">
+        <!-- Column 2 content -->
+        <h2>Second Column</h2>
+        <p>This is sample text in the second column. You can put any content you want here.</p>
+      </div>
+      <div class="col-md-4">
+        <!-- Column 3 content -->
+        <h2>Third Column</h2>
+        <p>This is sample text in the third column. You can put any content you want here.</p>
+      </div>
+    </div>
+  </div>
 
+  <!-- Language Switcher for Timeline Cards -->
+  <div class="container my-4" style="text-align:center;">
+    <!-- Simple language switcher for demonstration -->
+    <label for="langSelect" class="mb-2" style="font-weight:bold;">Choose language:</label>
+    <select id="langSelect" class="form-select w-auto d-inline-block" style="display:inline-block;">
+      <option value="en">English</option>
+      <option value="he">עברית (Hebrew)</option>
+      <option value="ar">العربية (Arabic)</option>
+    </select>
+  </div>
+
+  <!-- Timeline Cards Section -->
+  <section id="timeline-cards">
     <!-- Card 1: 1968 -->
-    <div>
+    <div data-en-title="Intel Founded" data-en-text="Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation."
+         data-he-title="אינטל נוסדה" data-he-text="רוברט נויס וגורדון מור משנים את שם החברה החדשה NM Electronics לאינטל, ומניחים את היסודות לעשורים של חדשנות טכנולוגית."
+         data-ar-title="تأسيس إنتل" data-ar-text="روبرت نويس وغوردون مور يغيران اسم الشركة الجديدة NM Electronics إلى إنتل، مما يمهد الطريق لعقود من الابتكار التكنولوجي.">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
+      <img src="img/1.jpg" alt="Robert Noyce and Gordon Moore, founders of Intel" />
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
         decades of technological innovation.
       </p>
     </div>
-
     <!-- Card 2: 1971 -->
-    <div>
+    <div data-en-title="First Microprocessor" data-en-text="Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices."
+         data-he-title="המיקרופרוססור הראשון" data-he-text="אינטל משיקה את 4004, המיקרופרוססור המסחרי הראשון בעולם, ומתחילה מהפכה טכנולוגית."
+         data-ar-title="أول معالج دقيق" data-ar-text="إنتل تطلق 4004، أول معالج دقيق تجاري في العالم، مما يشعل ثورة المعالجات الدقيقة.">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
+      <img src="img/2.jpg" alt="Intel 4004 microprocessor" />
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
         of computing devices.
       </p>
     </div>
-
     <!-- Card 3: 1978 -->
-    <div>
+    <div data-en-title="8086 Processor" data-en-text="Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era."
+         data-he-title="מעבד 8086" data-he-text="השקת מעבד 8086, שמבסס את ארכיטקטורת x86 שמניעה אינספור מחשבים אישיים ושרתים."
+         data-ar-title="معالج 8086" data-ar-text="إطلاق معالج 8086، الذي أسس معمارية x86 التي تشغل العديد من أجهزة الكمبيوتر والخوادم.">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
+      <img src="img/3.jpg" alt="Intel 8086 processor" />
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
       </p>
     </div>
-
     <!-- Card 4: 1985 -->
-    <div>
+    <div data-en-title="386 Processor" data-en-text="Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers."
+         data-he-title="מעבד 386" data-he-text="אינטל מציגה את מעבד 386 עם ארכיטקטורת 32 סיביות, ומביאה עמה עידן חדש של ביצועים וריבוי משימות למחשבים אישיים."
+         data-ar-title="معالج 386" data-ar-text="إنتل تقدم معالج 386 بمعمارية 32 بت، مما ي usher في عصر جديد من الأداء وتعدد المهام لأجهزة الكمبيوتر الشخصية.">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
+      <img src="img/4.jpg" alt="Intel 386 processor" />
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
         personal computers.
       </p>
     </div>
-
     <!-- Card 5: 2006 -->
-    <div>
+    <div data-en-title="Peak GHG Emissions" data-en-text="This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend."
+         data-he-title="שיא פליטות גזי חממה" data-he-text="שנה זו מסמנת את שיא פליטות גזי החממה השנתיות של אינטל לפעולות. בשנים שלאחר מכן, אינטל משקיעה רבות בהפחתת כימיקלים, אנרגיה מתחדשת וייצור חסכוני באנרגיה כדי להפוך מגמה זו."
+         data-ar-title="ذروة انبعاثات غازات الدفيئة" data-ar-text="تُعد هذه السنة الأعلى في انبعاثات غازات الدفيئة السنوية لعمليات إنتل. على مدار السنوات اللاحقة، تستثمر إنتل بشكل كبير في تقنيات الحد من الانبعاثات، والطاقة المتجددة، والتصنيع الكفء في استهلاك الطاقة لعكس هذا الاتجاه.">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Intel's highest annual greenhouse gas emissions in 2006" />
       <p>
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -89,48 +126,52 @@
         manufacturing to reverse this trend.
       </p>
     </div>
-
     <!-- Card 6: 2020 -->
-    <div>
+    <div data-en-title="RISE Strategy" data-en-text="Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction."
+         data-he-title="אסטרטגיית RISE" data-he-text="אינטל משיקה את אסטרטגיית RISE (אחראי, כוללני, בר קיימא, מאפשר) ואת מטרות 2030, במטרה להניע התקדמות רחבת היקף בתעשייה בתחום פעולות האקלים, ניהול מים וצמצום פסולת."
+         data-ar-title="استراتيجية RISE" data-ar-text="إنتل تطلق استراتيجيتها RISE (المسؤولة، الشاملة، المستدامة، الممكنة) وأهدافها لعام 2030، بهدف دفع التقدم على مستوى الصناعة في مجال العمل المناخي، وإدارة المياه، وتقليل النفايات.">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Intel RISE strategy and 2030 goals" />
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
       </p>
     </div>
-
     <!-- Card 7: 2022 -->
-    <div>
+    <div data-en-title="Net-Zero By 2040" data-en-text="Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives."
+         data-he-title="אפס נטו עד 2040" data-he-text="אינטל מכריזה על מחויבותה להשגת אפס נטו של פליטות גזי חממה (טווח 1 ו-2) בכל פעולותיה הגלובליות עד 2040, בהתבסס על שנים של יוזמות סביבתיות."
+         data-ar-title="صافي صفر بحلول عام 2040" data-ar-text="إنتل تعلن عن التزامها بتحقيق صافي صفر من انبعاثات غازات الدفيئة (النطاق 1 و 2) عبر عملياتها العالمية بحلول عام 2040، استنادًا إلى سنوات من المبادرات البيئية.">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Intel net-zero greenhouse gas emissions announcement" />
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
       </p>
     </div>
-
     <!-- Card 8: 2023 -->
-    <div>
+    <div data-en-title="Renewable Electricity" data-en-text="The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals."
+         data-he-title="חשמל מתחדש" data-he-text="אינטל משיגה שימוש של 99% בחשמל מתחדש ברחבי העולם, מה שעוזר להפחית באופן דרסטי את פליטות הפחמן ומניע התקדמות לעבר יעדי הקיימות ארוכי הטווח של אינטל."
+         data-ar-title="الكهرباء المتجددة" data-ar-text="إنتل تحقق استخدام 99% من الكهرباء المتجددة على مستوى العالم، مما يساعد على خفض انبعاثات الكربون بشكل كبير ويدفع التقدم نحو أهداف الاستدامة طويلة الأجل لإنتل.">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Intel achieves 99% renewable electricity usage" />
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
       </p>
     </div>
-
     <!-- Card 9: 2024 -->
-    <div>
+    <div data-en-title="Sustainability Summit" data-en-text="Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing."
+         data-he-title="פסגת הקיימות" data-he-text="אינטל מארחת את פסגת הקיימות הראשונה שלה, מאחדת ספקים, נציגי ממשלה ומובילי תעשייה לשיתוף פעולה בייצור סמיקונדוקטורים בר קיימא מדור הבא."
+         data-ar-title="قمة الاستدامة" data-ar-text="إنتل تستضيف أول قمة للاستدامة، موحدة الموردين، والمسؤولين الحكوميين، وقادة الصناعة للتعاون في تصنيع أشباه الموصلات المستدامة من الجيل التالي.">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Intel Sustainability Summit 2024" />
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -139,5 +180,119 @@
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- Bootstrap Subscription Form for Intel's Sustainability Newsletter -->
+  <div class="container my-4" dir="rtl">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <!-- Newsletter Subscription Form -->
+        <form class="p-4 rounded bg-light shadow-sm" aria-label="Subscribe to Intel's Sustainability Newsletter">
+          <h2 class="mb-3 text-center" dir="ltr">Subscribe to Intel's Sustainability Newsletter</h2>
+          <div class="mb-3">
+            <label for="newsletterEmail" class="form-label" dir="ltr">Email address</label>
+            <input type="email" class="form-control" id="newsletterEmail" placeholder="Enter your email" required aria-required="true" autocomplete="email">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Bootstrap Accordion for FAQ Section -->
+  <div class="container my-5">
+    <h2 class="mb-3 text-center">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+            What is Intel's sustainability mission?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Intel is committed to advancing sustainability through innovation, reducing environmental impact, and driving progress toward a more responsible future.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            How can I subscribe to the sustainability newsletter?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Simply fill out your email address in the subscription form above and click "Subscribe" to receive updates.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            Where can I learn more about Intel's environmental initiatives?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Visit Intel's official website or explore the timeline above to learn more about our ongoing sustainability efforts.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-light mt-5 py-4">
+    <div class="container text-center">
+      <!-- Placeholder navigation links -->
+      <nav class="mb-2" aria-label="Footer navigation">
+        <a href="#" class="text-light mx-2 text-decoration-none">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="text-light mx-2 text-decoration-none">Terms of Use</a>
+        <span>|</span>
+        <a href="#" class="text-light mx-2 text-decoration-none">Contact</a>
+      </nav>
+      <!-- Copyright -->
+      <small>&copy; 2024 Intel Corporation. All rights reserved.</small>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <!-- Add the language switcher script just before the closing body tag -->
+  <script>
+  // filepath: /workspaces/02-prj-intel-sustainability/index.html (inline script)
+  /*
+    This script changes the card titles and text based on the selected language.
+    It also sets the page direction to RTL for Hebrew and Arabic.
+  */
+  document.getElementById('langSelect').addEventListener('change', function() {
+    var lang = this.value;
+    var cards = document.querySelectorAll('#timeline-cards > div');
+    // Set direction for RTL languages
+    if (lang === 'he' || lang === 'ar') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.body.setAttribute('dir', 'rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.body.setAttribute('dir', 'ltr');
+    }
+    // Update card content
+    cards.forEach(function(card) {
+      var h3 = card.querySelector('h3');
+      var p = card.querySelector('p');
+      if (lang === 'he') {
+        h3.textContent = card.getAttribute('data-he-title');
+        p.textContent = card.getAttribute('data-he-text');
+      } else if (lang === 'ar') {
+        h3.textContent = card.getAttribute('data-ar-title');
+        p.textContent = card.getAttribute('data-ar-text');
+      } else {
+        h3.textContent = card.getAttribute('data-en-title');
+        p.textContent = card.getAttribute('data-en-text');
+      }
+    });
+  });
+  </script>
 </body>
 </html>
+

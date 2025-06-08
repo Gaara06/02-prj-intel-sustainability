@@ -76,7 +76,7 @@ section > div {
   cursor: pointer;
   /* 3D initial state */
   transform-style: preserve-3d;
-  background: linear-gradient(120deg, #0a2239, #185abd, #0a2239); /* Same gradient as header */
+  background: linear-gradient(120deg, #162a3a, #185abd, #162a3a); /* Darker for better contrast */
   background-size: 200% 200%;
   animation: headerGradient 6s ease-in-out infinite;
   color: #fff;
@@ -86,7 +86,7 @@ section > div {
 section > div:hover {
   transform: rotateY(15deg) scale(1.07);
   box-shadow: 0 12px 32px rgba(24,90,189,0.18), 0 2px 8px rgba(0,0,0,0.10);
-  background-color: #e3f0fc;
+  background-color: #20406a; /* Darker hover for contrast */
 }
 
 /* Hide card details by default except the year */
@@ -156,15 +156,81 @@ body > p {
   letter-spacing: 0.5px;
 }
 
+/* Footer styles for a simple, clear look */
+footer {
+  background: #222;
+  color: #fff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #e3f0fc; /* Lighter blue for better contrast */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer nav {
+  margin-bottom: 8px;
+}
+
+footer small {
+  font-size: 0.95em;
+}
+
+/* Responsive: stack cards and adjust padding on medium screens */
+@media (max-width: 1000px) {
+  section {
+    gap: 14px;
+    padding: 24px 4vw;
+  }
+  section > div {
+    width: 80vw;
+    max-width: 400px;
+    min-width: 220px;
+  }
+}
+
 /* Responsive: stack cards on small screens */
 @media (max-width: 700px) {
   section {
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
+    padding: 16px 2vw;
   }
   section > div {
-    width: 95%;
-    max-width: 340px;
+    width: 98vw;
+    max-width: 98vw;
+    min-width: 180px;
+  }
+  header p {
+    font-size: 1rem;
+    padding: 0 8px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive: make images smaller on very small screens */
+@media (max-width: 450px) {
+  section > div {
+    padding: 12px 4px;
+  }
+  section img {
+    max-width: 120px;
+  }
+  section h2, section h3 {
+    font-size: 1rem;
+  }
+  section p {
+    font-size: 0.9rem;
   }
 }
